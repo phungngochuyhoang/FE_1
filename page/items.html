@@ -144,7 +144,7 @@
             <li><a href="../index.html"> Trang Chủ </a></li>
             <li><a href="./introduction.html"> Giới Thiệu </a></li>
             <li><a href="./tips.html"> Mẹo Tìm Đồ </a></li>
-            <li><a href="./pickup.html"> Nhặt Được </a></li>
+            <li><a href="./items.html"> Nhặt Được </a></li>
             <li class="deactivate"><a href="./personal.html"> Cá nhân </a></li>
             <li class="deactivate"><a href="./logout.html"> Thoát </a></li>
             <li class="activate">
@@ -461,27 +461,5 @@
       src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"
     ></script>
     <script src="../js/index.js"></script>
-    <script>
-      var swiper = new Swiper(".swiperHomeBaner", {
-        loop: true,
-        speed: constObject.speedWeb,
-        autoplay: {
-          delay: constObject.delayWeb,
-        },
-      });
-      $(document).ready(function () {
-        $("#review-slide").owlCarousel({
-          items: 2,
-          itemsDesktop: [1000, 2],
-          itemsDesktopSmall: [990, 2],
-          itemsTablet: [768, 1],
-          pagination: false,
-          navigation: false,
-          navigationText: ["", ""],
-          slideSpeed: 1000,
-          autoPlay: true,
-        });
-      });
-    </script>
   </body>
 </html>

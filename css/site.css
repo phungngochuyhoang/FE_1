@@ -322,18 +322,21 @@ footer {
   color: var(--template-color-main);
 }
 .whatsup > div > h1,
-.why > div > h1 {
+.why > div > h1,
+.tips > div > h1 {
   font-family: "Dancing Script", cursive;
   color: var(--template-color-main);
 }
 .whatsup > div > p,
-.why > div > p {
+.why > div > p,
+.tips > div > p {
   color: var(--template-color-main);
   font-family: "M PLUS Rounded 1c", sans-serif;
   letter-spacing: 1px;
   text-align: justify;
 }
-.whatsup > div > img {
+.whatsup > div > img,
+.tips > div > img {
   width: 100%;
   height: 300px;
   object-fit: contain;
