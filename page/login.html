@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DEMO</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="../css/site.css" />
+    <style>
+      /* Structure */
+
+      img {
+        height: auto;
+        width: 100%;
+      }
+
+      .btn-login {
+        background: #fff;
+        height: 2.75rem;
+        margin: 1em auto auto;
+      }
+
+      input[type="password"],
+      input[type="text"] {
+        height: 1.5rem;
+        margin: 0 0 1.15rem;
+        width: 100%;
+        font-weight: 100;
+        text-indent: 5px;
+        font-size: 12px;
+        letter-spacing: 1px;
+      }
+
+      figure {
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+
+      figure img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      @media (min-width: 768px) {
+        figure {
+          float: left;
+          height: 100%;
+          position: relative;
+          width: 50%;
+        }
+      }
+
+      form {
+        overflow: hidden;
+        padding: 10%;
+        position: relative;
+        width: 80%;
+      }
+
+      @media (min-width: 768px) {
+        form {
+          float: left;
+          padding: 6%;
+          width: 38%;
+        }
+      }
+
+      main {
+        margin: 30px auto auto;
+        overflow: hidden;
+        position: relative;
+        width: 90%;
+      }
+
+      @media (min-width: 768px) {
+        main {
+          height: 21.25rem;
+          margin: auto;
+          width: 42.5rem;
+        }
+      }
+
+      .headline {
+        position: absolute;
+        top: 8vw;
+        width: 100%;
+      }
+
+      @media (min-width: 768px) {
+        .headline {
+          position: absolute;
+          top: 3.4rem;
+          width: 50%;
+        }
+      }
+
+      input[type="password"],
+      input[type="text"] {
+        background: none;
+        border: none;
+        border-bottom: 2px solid var(--template-color-main);
+        box-sizing: border-box;
+        outline: none;
+      }
+
+      input[type="password"]:required,
+      input[type="text"]:required {
+        box-shadow: none;
+        outline: none;
+      }
+
+      .btn-login {
+        background: var(--template-color-main);
+        border: none;
+        color: #fff;
+        padding: 0 2rem;
+      }
+
+      .btn-login:hover,
+      .btn-login:focus {
+        background: var(--template-color-main);
+        cursor: pointer;
+        outline: none;
+      }
+
+      .inputs--filled label {
+        transform: translate(0, 0);
+      }
+
+      .inputs--invalid input {
+        animation: shake 0.3s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+        background: url(//my-assets.netlify.com/codepen/dailyui-001/ico-invalid.svg)
+          center right no-repeat;
+        border-bottom: 2px solid var(--template-color-main);
+        box-shadow: none;
+        color: var(--template-color-main);
+        transform: translate3d(0, 0, 0);
+      }
+
+      @keyframes shake {
+        0%,
+        100% {
+          transform: translate3d(0, 0, 0);
+        }
+
+        33% {
+          transform: translate3d(-6px, 0, 0);
+        }
+
+        66% {
+          transform: translate3d(6px, 0, 0);
+        }
+      }
+
+      .inputs--invalid label {
+        color: var(--template-color-main);
+      }
+
+      label {
+        display: inline-block;
+        transform: translate(0, 1.25rem);
+        transition: 0.15s;
+      }
+
+      main {
+        background: white;
+        border-radius: 0.25rem;
+        box-shadow: 0 6px 22px rgba(0, 0, 0, 0.1);
+      }
+
+      .text-headline {
+        color: var(--template-color-white);
+        letter-spacing: 0.4rem;
+        font: 700 1.4em "Montserrat";
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      @media (min-width: 768px) {
+        .text-headline {
+          font: 700 1.625rem "Montserrat";
+        }
+      }
+
+      .text-body {
+        color: #354c58;
+        font: 700 16px "Montserrat", sans-serif;
+      }
+
+      .text-small-uppercase {
+        color: var(--template-color-main);
+        font: 700 0.75rem "Montserrat";
+        letter-spacing: 0.08rem;
+        text-transform: uppercase;
+      }
+
+      .text-subheadline {
+        color: var(--template-color-white);
+        left: -0.17rem;
+        letter-spacing: 0.143rem;
+        font: 700 0.652rem "Montserrat";
+        margin-bottom: 1.5rem;
+        position: relative;
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      @media (min-width: 768px) {
+        .text-subheadline {
+          font: 700 0.75rem "Montserrat";
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- HEADER  -->
+    <div class="container temp-navbar bg__color--main">
+      <div class="row">
+        <div class="col-12 p-0">
+          <i
+            class="fas fa-angle-left"
+            style="
+              font-size: 2em;
+              color: white;
+              position: absolute;
+              top: 20px;
+              left: 20px;
+              cursor: pointer;
+            "
+          ></i>
+          <ul class="temp-nav">
+            <li><a href="#"> Trang Chủ </a></li>
+            <li><a href="./page/introduction.html"> Giới Thiệu </a></li>
+            <li><a href="./page/tips.html"> Mẹo Tìm Đồ </a></li>
+            <li><a href="./page/pickup.html"> Nhặt Được </a></li>
+            <li><a href="./page/all.html"> Tất Cả </a></li>
+            <li class="deactivate"><a href="./page/all.html"> Cá nhân </a></li>
+            <li class="deactivate"><a href="./page/all.html"> Thoát </a></li>
+            <li class="activate">
+              <a href="./page/all.html"> Đăng nhập </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- MAIN -->
+    <div class="container">
+      <div class="row">
+        <div
+          class="
+            col-12 col-md-12
+            p-0
+            temp-my-menu
+            d-flex
+            justify-content-between
+          "
+        >
+          <div class="logo-design px-4">
+            <span>f</span>
+            <span>i</span>
+            <span>n</span>
+            <span>d</span>
+          </div>
+          <div class="menu-setting d-flex align-items-center px-4">
+            <!-- <div
+              class="personal open-nav"
+              style="
+                background: url(https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/E-girl.png/1200px-E-girl.png)
+                  no-repeat center;
+                background-size: cover;
+              "
+            ></div> -->
+            <i
+              class="fas fa-bars open-nav text-white"
+              style="cursor: pointer"
+            ></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <main class="my-5">
+            <figure>
+              <img
+                src="../img/cat_sit_glare_85388_2560x1080.jpg"
+                alt="Citymap illustration"
+              />
+            </figure>
+            <form>
+              <span>
+                <label for="username" class="text-small-uppercase"
+                  >Tên đăng nhập</label
+                >
+                <input
+                  class="text-body"
+                  id="username"
+                  name="username"
+                  type="text"
+                  required
+                />
+              </span>
+              <span>
+                <label for="password" class="text-small-uppercase"
+                  >Mật khẩu</label
+                >
+                <input
+                  class="text-body"
+                  id="password"
+                  name="password"
+                  type="password"
+                  required
+                />
+              </span>
+              <button class="btn-login" id="submit" type="submit">
+                Đăng nhập
+              </button>
+              <p class="mt-3">
+                Hoặc
+                <a href="./register.html" style="font-size: 12px; color: #c0b9b9">Đăng ký</a>
+              </p>
+            </form>
+          </main>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="w-100 py-4 flex-shrink-0">
+      <div class="container py-4">
+        <div class="row gy-4">
+          <div class="col-lg-4 col-md-6">
+            <h5 class="h1 text-white">FIND</h5>
+            <p class="small text-white">
+              Nơi tìm nhưng đồ thất lạc của sinh viên, nếu bạn đang đánh mất một
+              thứ gì đó hãy đến với FIND.
+            </p>
+          </div>
+          <div class="col-lg-2 col-md-6">
+            <h5 class="text-white mb-3">Liên kết</h5>
+            <ul class="list-unstyled">
+              <li><a class="text-white" href="#">Trang chủ</a></li>
+              <li><a class="text-white" href="#">Giới thiệu</a></li>
+              <li><a class="text-white" href="#">Mẹo Tìm đồ</a></li>
+              <li><a class="text-white" href="#">Nhặt được</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <h5 class="text-white mb-3">Liên hệ</h5>
+            <div class="d-flex">
+              <div class="icon-item">
+                <a href="#"><i class="fab fa-facebook-square"></i></a>
+              </div>
+              <div class="icon-item">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+              </div>
+              <div class="icon-item">
+                <a href="#"><i class="far fa-envelope"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../js/jquery.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/index.js"></script>
+    <script>
+      var inputs = document.querySelectorAll(
+        "input[type=text], input[type=password]"
+      );
+      for (i = 0; i < inputs.length; i++) {
+        var inputEl = inputs[i];
+        if (inputEl.value.trim() !== "") {
+          inputEl.parentNode.classList.add("input--filled");
+        }
+        inputEl.addEventListener("focus", onFocus);
+        inputEl.addEventListener("blur", onBlur);
+      }
+
+      function onFocus(ev) {
+        ev.target.parentNode.classList.add("inputs--filled");
+      }
+
+      function onBlur(ev) {
+        if (ev.target.value.trim() === "") {
+          ev.target.parentNode.classList.remove("inputs--filled");
+        } else if (ev.target.checkValidity() == false) {
+          ev.target.parentNode.classList.add("inputs--invalid");
+          ev.target.addEventListener("input", liveValidation);
+        } else if (ev.target.checkValidity() == true) {
+          ev.target.parentNode.classList.remove("inputs--invalid");
+          ev.target.addEventListener("input", liveValidation);
+        }
+      }
+
+      function liveValidation(ev) {
+        if (ev.target.checkValidity() == false) {
+          ev.target.parentNode.classList.add("inputs--invalid");
+        } else {
+          ev.target.parentNode.classList.remove("inputs--invalid");
+        }
+      }
+
+      var submitBtn = document.querySelectorAll("button[type=submit]");
+      submitBtn[0].addEventListener("click", onSubmit);
+
+      function onSubmit(ev) {
+        var inputsWrappers = ev.target.parentNode.querySelectorAll("span");
+        for (i = 0; i < inputsWrappers.length; i++) {
+          input = inputsWrappers[i].querySelector(
+            "input[type=text], input[type=password]"
+          );
+          if (input.checkValidity() == false) {
+            inputsWrappers[i].classList.add("inputs--invalid");
+          } else if (input.checkValidity() == true) {
+            inputsWrappers[i].classList.remove("inputs--invalid");
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
