@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DEMO</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css"
+    />
+
+    <link rel="stylesheet" href="../css/site.css" />
+    <style>
+      .search__container {
+        padding-top: 64px;
+      }
+
+      .search__input {
+        width: 100%;
+        padding: 12px 24px;
+        background-color: transparent;
+        transition: transform 250ms ease-in-out;
+        font-size: 14px;
+        line-height: 18px;
+        color: #575756;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-size: 18px 18px;
+        background-position: 95% center;
+        border-radius: 50px;
+        border: 1px solid var(--template-color-main);
+        transition: all 250ms ease-in-out;
+        backface-visibility: hidden;
+        transform-style: preserve-3d;
+      }
+
+      .search__input::placeholder {
+        color: rgba(87, 87, 86, 0.8);
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+      }
+
+      .search__input:hover,
+      .search__input:focus {
+        padding: 12px 0;
+        outline: 0;
+        border: 1px solid transparent;
+        border-bottom: 1px solid var(--template-color-main);
+        border-radius: 0;
+        background-position: 100% center;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- HEADER  -->
+    <div class="container temp-navbar bg__color--main">
+      <div class="row">
+        <div class="col-12 p-0">
+          <i
+            class="fas fa-angle-left"
+            style="
+              font-size: 2em;
+              color: white;
+              position: absolute;
+              top: 20px;
+              left: 20px;
+              cursor: pointer;
+            "
+          ></i>
+          <ul class="temp-nav">
+            <li><a href="../index.html"> Trang Chủ </a></li>
+            <li><a href="./introduction.html"> Giới Thiệu </a></li>
+            <li><a href="./tips.html"> Mẹo Tìm Đồ </a></li>
+            <li><a href="./page/pickup.html"> Nhặt Được </a></li>
+            <li class="deactivate"><a href="./personal.html"> Cá nhân </a></li>
+            <li class="deactivate"><a href="./logout.html"> Thoát </a></li>
+            <li class="activate">
+              <a href="./login.html"> Đăng nhập </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- MAIN -->
+    <div class="container">
+      <div class="row">
+        <div
+          class="
+            col-12 col-md-12
+            p-0
+            temp-my-menu
+            d-flex
+            justify-content-between
+          "
+        >
+          <div class="logo-design px-4">
+            <a href="../index.html">
+              <span>f</span>
+              <span>i</span>
+              <span>n</span>
+              <span>d</span>
+            </a>
+          </div>
+          <div class="menu-setting d-flex align-items-center px-4">
+            <!-- <div
+              class="personal open-nav"
+              style="
+                background: url(https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/E-girl.png/1200px-E-girl.png)
+                  no-repeat center;
+                background-size: cover;
+              "
+            ></div> -->
+            <i
+              class="fas fa-bars open-nav text-white"
+              style="cursor: pointer"
+            ></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="row whatsup">
+        <div class="col-12">
+          <h1 class="my-3">What's up</h1>
+          <p>
+            Bạn đã đánh rơi hay quên một món đồ ?
+            <br />
+            thế thì hãy mau tìm kiếm nó, có thể một ai đó đã nhặt được và đăng
+            lên đây. Giống như con chó tội nghiệp dưới đây nà 🤫
+          </p>
+          <img src="../img/pug_dog_pet_171044_3840x2400.jpg" alt="" />
+        </div>
+      </div>
+
+      <div class="row why">
+        <div class="col-12">
+          <h1 class="my-3">Why?</h1>
+          <p>
+            Hiện nay tình trạng thất lạc đồ dùng cá nhân của sinh viên đang là
+            vấn đề đáng quan tâm Để có thể hộ trợ sinh viên, cụ thể là tại
+            trường ĐH Sư Phạm Kỹ Thuật - ĐH Đà Nẵng, chúng tôi đã lên ý tưởng và
+            thiết kế website TimdothatlacUTE.com, nhằm mục đích tương tác qua
+            lại giữa người mất và người nhặt một cách nhanh chóng và dễ dàng
+            nhất, cũng như người mất có thể tìm lại được đồ dùng cá nhân của
+            mình trong thời gian sớm nhất có thể.
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <h1
+            class="text-center"
+            style="
+              font-family: 'Dancing Script', cursive;
+              color: var(--template-color-main);
+            "
+          >
+            Người sáng lập
+          </h1>
+          <div class="developer-web my-3">
+            <div
+              class="card"
+              style="
+                background: url(../img/kitten_cat_gray_198041_3840x2400.jpg)
+                  no-repeat center;
+                background-size: cover;
+              "
+            >
+              <div class="border">
+                <h2>Hoàng Thư</h2>
+                <div class="icons">
+                  <a href="#">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                  <a href="#">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                  <a href="#">
+                    <i class="fas fa-paper-plane"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="w-100 py-4 flex-shrink-0">
+      <div class="container py-4">
+        <div class="row gy-4">
+          <div class="col-lg-4 col-md-6">
+            <h5 class="h1 text-white">FIND</h5>
+            <p class="small text-white">
+              Nơi tìm nhưng đồ thất lạc của sinh viên, nếu bạn đang đánh mất một
+              thứ gì đó hãy đến với FIND.
+            </p>
+          </div>
+          <div class="col-lg-2 col-md-6">
+            <h5 class="text-white mb-3">Liên kết</h5>
+            <ul class="list-unstyled">
+              <li><a class="text-white" href="#">Trang chủ</a></li>
+              <li><a class="text-white" href="#">Giới thiệu</a></li>
+              <li><a class="text-white" href="#">Mẹo Tìm đồ</a></li>
+              <li><a class="text-white" href="#">Nhặt được</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <h5 class="text-white mb-3">Liên hệ</h5>
+            <div class="d-flex">
+              <div class="icon-item">
+                <a href="#"><i class="fab fa-facebook-square"></i></a>
+              </div>
+              <div class="icon-item">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+              </div>
+              <div class="icon-item">
+                <a href="#"><i class="far fa-envelope"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../js/jquery.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"
+    ></script>
+    <script src="../js/index.js"></script>
+    <script>
+      var swiper = new Swiper(".swiperHomeBaner", {
+        loop: true,
+        speed: constObject.speedWeb,
+        autoplay: {
+          delay: constObject.delayWeb,
+        },
+      });
+      $(document).ready(function () {
+        $("#review-slide").owlCarousel({
+          items: 2,
+          itemsDesktop: [1000, 2],
+          itemsDesktopSmall: [990, 2],
+          itemsTablet: [768, 1],
+          pagination: false,
+          navigation: false,
+          navigationText: ["", ""],
+          slideSpeed: 1000,
+          autoPlay: true,
+        });
+      });
+    </script>
+  </body>
+</html>

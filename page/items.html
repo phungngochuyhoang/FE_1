@@ -31,7 +31,47 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css"
     />
 
-    <link rel="stylesheet" href="./css/site.css" />
+    <link rel="stylesheet" href="../css/site.css" />
+    <style>
+      .search__container {
+        padding-top: 64px;
+      }
+
+      .search__input {
+        width: 100%;
+        padding: 12px 24px;
+        background-color: transparent;
+        transition: transform 250ms ease-in-out;
+        font-size: 14px;
+        line-height: 18px;
+        color: #575756;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-size: 18px 18px;
+        background-position: 95% center;
+        border-radius: 50px;
+        border: 1px solid var(--template-color-main);
+        transition: all 250ms ease-in-out;
+        backface-visibility: hidden;
+        transform-style: preserve-3d;
+      }
+
+      .search__input::placeholder {
+        color: rgba(87, 87, 86, 0.8);
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+      }
+
+      .search__input:hover,
+      .search__input:focus {
+        padding: 12px 0;
+        outline: 0;
+        border: 1px solid transparent;
+        border-bottom: 1px solid var(--template-color-main);
+        border-radius: 0;
+        background-position: 100% center;
+      }
+    </style>
   </head>
   <body>
     <!-- HEADER  -->
@@ -50,14 +90,14 @@
             "
           ></i>
           <ul class="temp-nav">
-            <li><a href="#"> Trang Chủ </a></li>
-            <li><a href="./page/introduction.html"> Giới Thiệu </a></li>
-            <li><a href="./page/tips.html"> Mẹo Tìm Đồ </a></li>
-            <li><a href="./page/pickup.html"> Nhặt Được </a></li>
-            <li class="deactivate"><a href="./page/all.html"> Cá nhân </a></li>
-            <li class="deactivate"><a href="./page/all.html"> Thoát </a></li>
+            <li><a href="../index.html"> Trang Chủ </a></li>
+            <li><a href="./introduction.html"> Giới Thiệu </a></li>
+            <li><a href="./tips.html"> Mẹo Tìm Đồ </a></li>
+            <li><a href="./pickup.html"> Nhặt Được </a></li>
+            <li class="deactivate"><a href="./personal.html"> Cá nhân </a></li>
+            <li class="deactivate"><a href="./logout.html"> Thoát </a></li>
             <li class="activate">
-              <a href="./page/login.html"> Đăng nhập </a>
+              <a href="./login.html"> Đăng nhập </a>
             </li>
           </ul>
         </div>
@@ -77,7 +117,7 @@
           "
         >
           <div class="logo-design px-4">
-            <a href="./index.html">
+            <a href="../index.html">
               <span>f</span>
               <span>i</span>
               <span>n</span>
@@ -164,99 +204,27 @@
               <ul class="pl-4 submenu-item" data-submenu-id="3">
                 <li class="mb-2 item">
                   <i class="fa fa-plus" style="font-size: 14px"></i>
-                  <a href="./page/items.html" style="font-size: 14px"> Xe máy </a>
+                  <a href="#" style="font-size: 14px"> Xe máy </a>
                 </li>
               </ul>
             </li>
           </ul>
         </div>
         <div class="col-12 col-md-9">
-          <div class="swiper swiperHomeBaner my-4">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <img
-                  src="./img/kitten_cat_gray_198041_3840x2400.jpg"
-                  alt="not image"
-                />
-                <div class="slogan p-3">
-                  <h3 class="text-white text-center m-text-sm">
-                    TÌM ĐỒ THẤT LẠC TRỰC TUYẾN
-                  </h3>
-                  <p
-                    class="text-white text-center m-hide"
-                    style="text-shadow: 1px 1px 1px rgb(72, 70, 70)"
-                  >
-                    Bạn là sinh viên, bạn đã từng đánh rơi những vật dụng cá
-                    nhân quan trọng trong quá trình học tập. Không sao cả, hãy
-                    đến với “TimdothatlacUTE.com” để có thể tìm lại được những
-                    thứ mà mình đã đánh rơi một cách nhanh nhất.
-                  </p>
-                  <div class="btn-slogan">
-                    <a href="./page/register.html" class="btn btn-danger btn-sm w-25"> Đăng ký </a>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <img
-                  src="./img/pug_dog_pet_171044_3840x2400.jpg"
-                  alt="not image"
-                />
-                <div class="slogan p-3">
-                  <h3 class="text-white text-center m-text-sm">
-                    TÌM ĐỒ THẤT LẠC TRỰC TUYẾN
-                  </h3>
-                  <p
-                    class="text-white text-center m-hide"
-                    style="text-shadow: 1px 1px 1px rgb(72, 70, 70)"
-                  >
-                    Bạn là sinh viên, bạn đã từng đánh rơi những vật dụng cá
-                    nhân quan trọng trong quá trình học tập. Không sao cả, hãy
-                    đến với “TimdothatlacUTE.com” để có thể tìm lại được những
-                    thứ mà mình đã đánh rơi một cách nhanh nhất.
-                  </p>
-                  <div class="btn-slogan">
-                    <a href="./page/register.html" class="btn btn-danger btn-sm w-25"> Đăng ký </a>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <img
-                  src="./img/kitten_cat_glance_213440_3840x2400.jpg"
-                  alt="not image"
-                />
-                <div class="slogan p-3">
-                  <h3 class="text-white text-center m-text-sm">
-                    TÌM ĐỒ THẤT LẠC TRỰC TUYẾN
-                  </h3>
-                  <p
-                    class="text-white text-center m-hide"
-                    style="text-shadow: 1px 1px 1px rgb(72, 70, 70)"
-                  >
-                    Bạn là sinh viên, bạn đã từng đánh rơi những vật dụng cá
-                    nhân quan trọng trong quá trình học tập. Không sao cả, hãy
-                    đến với “TimdothatlacUTE.com” để có thể tìm lại được những
-                    thứ mà mình đã đánh rơi một cách nhanh nhất.
-                  </p>
-                  <div class="btn-slogan">
-                    <a href="./page/register.html" class="btn btn-danger btn-sm w-25"> Đăng ký </a>
-                  </div>
-                </div>
-              </div>
+          <form action="#">
+            <div class="search__container">
+              <input class="search__input" type="text" placeholder="Search" />
             </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-12">
+          </form>
           <h2 class="text-center mt-5" style="color: #5a9f65">
-            Khám phá danh mục
+            Danh mục <span> xe máy </span>
           </h2>
           <div class="my-4 category-open">
             <div class="big mb-4">
               <article class="recipe">
                 <div class="pizza-box">
                   <img
-                    src="./img/motorcycle_bike_side_view_115358_3840x2400.jpg"
+                    src="../img/motorcycle_bike_side_view_115358_3840x2400.jpg"
                     width="1500"
                     height="1368"
                     alt="not image"
@@ -281,7 +249,7 @@
               <article class="recipe">
                 <div class="pizza-box">
                   <img
-                    src="./img/motorcycle_bike_side_view_115358_3840x2400.jpg"
+                    src="../img/motorcycle_bike_side_view_115358_3840x2400.jpg"
                     width="1500"
                     height="1368"
                     alt="not image"
@@ -306,7 +274,7 @@
               <article class="recipe">
                 <div class="pizza-box">
                   <img
-                    src="./img/motorcycle_bike_side_view_115358_3840x2400.jpg"
+                    src="../img/motorcycle_bike_side_view_115358_3840x2400.jpg"
                     width="1500"
                     height="1368"
                     alt="not image"
@@ -326,54 +294,6 @@
                   </button>
                 </div>
               </article>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-12 col-md-12">
-          <h2 class="text-center my-5" style="color: #5a9f65">
-            ĐÁNH GIÁ CỦA NGƯỜI DÙNG
-          </h2>
-          <div id="review-slide" class="owl-carousel">
-            <div class="testimonial">
-              <div class="pic">
-                <img
-                  src="https://images.pexels.com/photos/704955/pexels-photo-704955.jpeg?w=940&h=650&auto=compress&cs=tinysrgb"
-                />
-              </div>
-              <p class="description">
-                Website rất hữu dụng, thao tác nhanh, dễ tìm kiếm, dễ dàng hỗ
-                trợ sinh viên những lúc để quên đồ dùng cá nhân tại trường.
-              </p>
-              <h3 class="title">Khách hàng</h3>
-              <small class="post">- Hoàng Thư </small>
-            </div>
-
-            <div class="testimonial">
-              <div class="pic">
-                <img
-                  src="https://images.pexels.com/photos/638700/pexels-photo-638700.jpeg?w=940&h=650&auto=compress&cs=tinysrgb"
-                />
-              </div>
-              <p class="description">
-                Website rất hữu dụng, thao tác nhanh, dễ tìm kiếm, dễ dàng hỗ
-                trợ sinh viên những lúc để quên đồ dùng cá nhân tại trường.
-              </p>
-              <h3 class="title">Khách hàng</h3>
-              <small class="post">- Hoài Lam </small>
-            </div>
-
-            <div class="testimonial">
-              <div class="pic">
-                <img src="./img/cat_sit_glare_85388_2560x1080.jpg" />
-              </div>
-              <p class="description">
-                W Website rất hữu dụng, thao tác nhanh, dễ tìm kiếm, dễ dàng hỗ
-                trợ sinh viên những lúc để quên đồ dùng cá nhân tại trường.
-              </p>
-              <h3 class="title">Hoàng</h3>
-              <small class="post">- Graphic Designer </small>
             </div>
           </div>
         </div>
@@ -418,7 +338,7 @@
       </div>
     </footer>
 
-    <script src="./js/jquery.min.js"></script>
+    <script src="../js/jquery.min.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
@@ -429,7 +349,7 @@
       type="text/javascript"
       src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"
     ></script>
-    <script src="./js/index.js"></script>
+    <script src="../js/index.js"></script>
     <script>
       var swiper = new Swiper(".swiperHomeBaner", {
         loop: true,
