@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DEMO</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css"
+    />
+
+    <link rel="stylesheet" href="../css/site.css" />
+    <style>
+      .form-post label {
+        color: var(--template-color-main);
+      }
+      .avatar-upload {
+        position: relative;
+        max-width: 205px;
+      }
+      .avatar-upload .avatar-edit {
+        position: absolute;
+        right: 12px;
+        z-index: 1;
+        top: 10px;
+      }
+      .avatar-upload .avatar-edit input {
+        display: none;
+      }
+      .imageUpload {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        cursor: pointer;
+      }
+      .avatar-upload .avatar-preview {
+        width: 100px;
+        height: 100px;
+        position: relative;
+        border: 1px solid #d1d1d1;
+        cursor: pointer;
+      }
+      .avatar-upload .avatar-preview > div {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: absolute;
+        top: 0;
+        z-index: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- HEADER  -->
+    <div class="container temp-navbar bg__color--main">
+      <div class="row">
+        <div class="col-12 p-0">
+          <i
+            class="fas fa-angle-left"
+            style="
+              font-size: 2em;
+              color: white;
+              position: absolute;
+              top: 20px;
+              left: 20px;
+              cursor: pointer;
+            "
+          ></i>
+          <ul class="temp-nav">
+            <li><a href="../index.html"> Trang Chủ </a></li>
+            <li><a href="./introduction.html"> Giới Thiệu </a></li>
+            <li><a href="./tips.html"> Mẹo Tìm Đồ </a></li>
+            <li><a href="./items.html"> Nhặt Được </a></li>
+            <li class="deactivate"><a href="./personal.html"> Cá nhân </a></li>
+            <li class="deactivate"><a href="./logout.html"> Thoát </a></li>
+            <li class="activate">
+              <a href="./login.html"> Đăng nhập </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- MAIN -->
+    <div class="container">
+      <div class="row">
+        <div
+          class="
+            col-12 col-md-12
+            p-0
+            temp-my-menu
+            d-flex
+            justify-content-between
+          "
+        >
+          <div class="logo-design px-4">
+            <a href="../index.html">
+              <span>f</span>
+              <span>i</span>
+              <span>n</span>
+              <span>d</span>
+            </a>
+          </div>
+          <div class="menu-setting d-flex align-items-center px-4">
+            <!-- <div
+              class="personal open-nav"
+              style="
+                background: url(https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/E-girl.png/1200px-E-girl.png)
+                  no-repeat center;
+                background-size: cover;
+              "
+            ></div> -->
+            <i
+              class="fas fa-bars open-nav text-white"
+              style="cursor: pointer"
+            ></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="row form-post mt-5">
+        <div class="col-12">
+          <h1 class="mb-5" style="color: var(--template-color-main)">
+            Đăng bài
+          </h1>
+          <div class="mb-5">
+            <form action="#" class="row g-3">
+              <div class="col-md-6 mt-1">
+                <label for="myName" class="form-label">Tên của bạn *</label>
+                <input type="email" class="form-control" id="myName" />
+              </div>
+              <div class="col-md-6 mt-1">
+                <label for="phone" class="form-label">Số điện thoại *</label>
+                <input type="password" class="form-control" id="phone" />
+              </div>
+              <div class="col-12 mt-1">
+                <label for="object" class="form-label">Đối tượng *</label>
+                <input type="text" class="form-control" id="object" />
+              </div>
+              <div class="col-12 mt-1">
+                <label for="addresss" class="form-label"
+                  >Địa chỉ của bạn *</label
+                >
+                <input type="text" class="form-control" id="addresss" />
+              </div>
+              <div class="col-md-6 mt-3">
+                <label for="title-post" class="form-label"
+                  >Tiêu đề bài đăng *</label
+                >
+                <input type="text" class="form-control" id="title-post" />
+              </div>
+              <div class="col-md-6 mt-3">
+                <label for="address-item" class="form-label"
+                  >Địa chỉ đồ vật *</label
+                >
+                <input type="text" class="form-control" id="address-item" />
+              </div>
+              <div class="col-md-6 mt-3">
+                <label for="timedate" class="form-label">Thời gian *</label>
+                <input type="date" class="form-control" id="timedate" />
+              </div>
+              <div class="col-md-6 mt-3">
+                <label for="inputZip" class="form-label">Danh mục *</label>
+                <input type="text" class="form-control" id="inputZip" />
+              </div>
+
+              <div class="col-md-12 mt-3">
+                <label class="form-label">Mô tả (ít nhất 20 từ) * </label>
+                <textarea
+                  class="form-control"
+                  aria-label="With textarea"
+                ></textarea>
+              </div>
+              <div class="col-md-3 col-4 mt-4 border-0">
+                <div class="avatar-upload">
+                  <div class="avatar-edit">
+                    <input
+                      type="file"
+                      id="imageUpload"
+                      accept=".png, .jpg, .jpeg"
+                    />
+                  </div>
+
+                  <div class="avatar-preview">
+                    <label for="imageUpload" class="imageUpload">
+                      <span style="font-weight: bold"> + </span>
+                      <span style="font-size: 10px"> Thêm ảnh </span>
+                    </label>
+                    <div
+                      id="imagePreview"
+                      style="background-image: url()"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 col-4 m-4 border-0">
+                <div class="avatar-upload">
+                  <div class="avatar-edit">
+                    <input
+                      type="file"
+                      id="cameraUpload"
+                      accept=".png, .jpg, .jpeg"
+                    />
+                  </div>
+
+                  <div class="avatar-preview">
+                    <label for="cameraUpload" class="imageUpload">
+                      <span style="font-size: 10px">
+                        <img src="../img/icon-camera-512 1.png"/>
+                      </span>
+                    </label>
+                    <div
+                      id="cameraPreview"
+                      style="background-image: url()"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 d-flex justify-content-center">
+                <button type="submit" class="btn mt-3 text-white" style="background: var(--template-color-main);">
+                  Đăng bài
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="w-100 py-4 flex-shrink-0">
+      <div class="container py-4">
+        <div class="row gy-4">
+          <div class="col-lg-4 col-md-6">
+            <h5 class="h1 text-white">FIND</h5>
+            <p class="small text-white">
+              Nơi tìm nhưng đồ thất lạc của sinh viên, nếu bạn đang đánh mất một
+              thứ gì đó hãy đến với FIND.
+            </p>
+          </div>
+          <div class="col-lg-2 col-md-6">
+            <h5 class="text-white mb-3">Liên kết</h5>
+            <ul class="list-unstyled">
+              <li><a class="text-white" href="#">Trang chủ</a></li>
+              <li><a class="text-white" href="#">Giới thiệu</a></li>
+              <li><a class="text-white" href="#">Mẹo Tìm đồ</a></li>
+              <li><a class="text-white" href="#">Nhặt được</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <h5 class="text-white mb-3">Liên hệ</h5>
+            <div class="d-flex">
+              <div class="icon-item">
+                <a href="#"><i class="fab fa-facebook-square"></i></a>
+              </div>
+              <div class="icon-item">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+              </div>
+              <div class="icon-item">
+                <a href="#"><i class="far fa-envelope"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../js/jquery.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"
+    ></script>
+    <script src="../js/index.js"></script>
+    <script>
+      $("#imageUpload").change(function () {
+        readURL(this, "#imagePreview");
+      });
+      $("#cameraUpload").change(function () {
+        readURL(this, "#cameraPreview");
+      });
+    </script>
+  </body>
+</html>
