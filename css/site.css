@@ -107,62 +107,7 @@ table {
   background-color: var(--template-color-main-2);
 }
 
-/* animate */
 
-/* mobile */
-@media screen and (max-width: 736px) {
-  .temp-navbar {
-    width: 100%;
-    border-radius: 0;
-    box-shadow: none;
-  }
-  .temp-nav li a {
-    font-size: var(--template-font-size-sup-larger);
-  }
-  .swiperHomeBaner .swiper-wrapper .swiper-slide {
-    height: 200px;
-    position: relative;
-    z-index: 1;
-  }
-  .swiperHomeBaner .swiper-wrapper .swiper-slide .slogan {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    z-index: 2;
-    width: 100%;
-  }
-  .swiperHomeBaner .swiper-wrapper .swiper-slide .slogan > h3 {
-    font-size: var(--template-font-size-normal);
-  }
-  .swiperHomeBaner .swiper-wrapper .swiper-slide .slogan > p {
-    font-size: var(--template-font-size-small);
-  }
-  .btn-slogan {
-    display: flex;
-    justify-content: space-evenly;
-  }
-  .btn-slogan a {
-    margin: 0;
-  }
-  .category-open {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .testimonial {
-    padding: 20px;
-    text-align: center;
-  }
-  .testimonial .pic {
-    display: block;
-    position: static;
-    margin: 0 auto 15px;
-  }
-}
-/* tablet */
-@media screen and (max-width: 1024px) {
-}
 
 /* default Mr.hoang template  */
 a {
@@ -568,4 +513,60 @@ footer {
 .box-infomation > ul > li > i {
   padding-right: 6px;
   color: var(--template-color-main);
+}
+
+
+/* mobile */
+@media screen and (max-width: 736px) {
+  .temp-navbar {
+    width: 100%;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .temp-nav li a {
+    font-size: var(--template-font-size-sup-larger);
+  }
+  .swiperHomeBaner .swiper-wrapper .swiper-slide {
+    height: 200px;
+    position: relative;
+    z-index: 1;
+  }
+  .swiperHomeBaner .swiper-wrapper .swiper-slide .slogan {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 2;
+    width: 100%;
+  }
+  .swiperHomeBaner .swiper-wrapper .swiper-slide .slogan > h3 {
+    font-size: var(--template-font-size-normal);
+  }
+  .swiperHomeBaner .swiper-wrapper .swiper-slide .slogan > p {
+    font-size: var(--template-font-size-small);
+  }
+  .btn-slogan {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .btn-slogan a {
+    margin: 0;
+  }
+  .category-open {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .testimonial {
+    padding: 20px;
+    text-align: center;
+  }
+  .testimonial .pic {
+    display: block;
+    position: static;
+    margin: 0 auto 15px;
+  }
+}
+/* tablet */
+@media screen and (max-width: 1024px) {
 }
